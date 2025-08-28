@@ -1,0 +1,146 @@
+﻿:root {
+	--primary-color: #4CAF50; /* Green */
+	--secondary-color: #2869ff; /* Blue */
+	--text-light: #ffffff;
+}
+
+.navbar {
+	background-color: var(--primary-color);
+	padding: 15px 0;
+	box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+	font-weight: bold;
+	font-size: 24px;
+	color: var(--text-light);
+}
+
+.nav-link {
+	color: var(--text-light);
+	margin: 0 15px;
+	font-weight: 500;
+	transition: all 0.3s;
+}
+
+	.nav-link:hover {
+		color: var(--secondary-color);
+		transform: translateY(-2px);
+	}
+
+.search-box {
+	position: relative;
+	width: 250px;
+}
+
+.search-input {
+	padding-right: 40px;
+	border-radius: 20px;
+	border: none;
+}
+
+.search-btn {
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	background: none;
+	border: none;
+	color: var(--primary-color);
+}
+
+/* New styles for home page */
+.hero-section {
+	background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+	background-size: cover;
+	background-position: center;
+	color: white;
+	padding: 100px 0;
+	text-align: center;
+}
+
+.product-card {
+	transition: transform 0.3s;
+	margin-bottom: 20px;
+	height: 100%;
+}
+
+	.product-card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+	}
+
+.news-section {
+	background-color: #f8f9fa;
+	padding: 50px 0;
+}
+
+.profile-card {
+	text-align: center;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+	transition: all 0.3s;
+}
+
+	.profile-card:hover {
+		transform: translateY(-5px);
+		box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+	}
+
+.profile-img {
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	object-fit: cover;
+	margin: 0 auto 15px;
+	border: 3px solid var(--primary-color);
+}
+
+footer {
+	background-color: #343a40;
+	color: white;
+	padding: 50px 0 20px;
+}
+
+.footer-links a {
+	color: #adb5bd;
+	text-decoration: none;
+	margin: 0 10px;
+}
+
+	.footer-links a:hover {
+		color: white;
+	}
+
+.carousel-item img {
+	height: 400px;
+	object-fit: cover;
+}
+
+.carousel-caption {
+	background-color: rgba(0,0,0,0.6);
+	border-radius: 10px;
+	padding: 20px;
+}
+
+@media (max-width: 992px) {
+	.search-box {
+		margin-top: 15px;
+		width: 100%;
+	}
+
+	.carousel-item img {
+		height: 300px;
+	}
+}
+
+@media (max-width: 768px) {
+	.hero-section {
+		padding: 60px 0;
+	}
+
+	.carousel-item img {
+		height: 250px;
+	}
+}

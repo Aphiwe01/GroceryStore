@@ -1,0 +1,113 @@
+﻿
+:root {
+	--bg-dark: #1a2131;
+	--btn-primary: #2869ff;
+	--text-light: #ffffff;
+	--card-bg: #2a3447;
+}
+
+body {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	background-color: var(--bg-dark);
+	color: var(--text-light);
+}
+/* Sidebar */
+.sidebar {
+	background: var(--bg-dark);
+	color: var(--text-light);
+	height: 100vh;
+	position: fixed;
+	border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+	.sidebar .nav-link {
+		color: rgba(255, 255, 255, 0.8);
+		margin: 5px 0;
+		border-radius: 5px;
+		transition: all 0.3s;
+	}
+
+		.sidebar .nav-link:hover, .sidebar .nav-link.active {
+			background: var(--btn-primary);
+			color: white;
+		}
+
+		.sidebar .nav-link i {
+			margin-right: 10px;
+		}
+/* Main Content */
+.main-content {
+	margin-left: 250px;
+	padding: 20px;
+	background-color: #f5f5f5;
+	min-height: 100vh;
+}
+/* Cards */
+.product-card {
+	background: var(--card-bg);
+	border: none;
+	border-radius: 10px;
+	overflow: hidden;
+	transition: transform 0.3s;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	color: var(--text-light);
+}
+
+	.product-card:hover {
+		transform: translateY(-5px);
+	}
+
+	.product-card .card-img-top {
+		height: 150px;
+		object-fit: cover;
+	}
+
+	.product-card .category-badge {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		background: var(--btn-primary);
+	}
+/* Buttons */
+.btn-primary {
+	background-color: var(--btn-primary);
+	border: none;
+}
+
+.btn-outline-primary {
+	color: var(--btn-primary);
+	border-color: var(--btn-primary);
+}
+
+	.btn-outline-primary:hover {
+		background-color: var(--btn-primary);
+	}
+/* Profile Section */
+.profile-section {
+	background: var(--card-bg);
+	border-radius: 10px;
+	padding: 20px;
+}
+
+.profile-img {
+	width: 100px;
+	height: 100px;
+	object-fit: cover;
+	border: 3px solid var(--btn-primary);
+}
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+	.sidebar {
+		margin-left: -250px;
+	}
+
+		.sidebar.active {
+			margin-left: 0;
+		}
+
+	.main-content {
+		margin-left: 0;
+	}
+}
+
+
